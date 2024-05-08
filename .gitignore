@@ -1,18 +1,9 @@
 #Bloque 1 (Herramientas para la IA)
 
-# Tema 1
-
-/B1_HerramientasParaIA/T1_Introduccion_Python/Matplotlib_notebook
-
-# Tema 4
-
-B1_HerramientasParaIA/T4_MachineLearning/Clases9_10/tarea
-B1_HerramientasParaIA/T4_MachineLearning/UV_anomalias
-B1_HerramientasParaIA/T4_MachineLearning/aprendizaje_no_supervisado
-B1_HerramientasParaIA/T4_MachineLearning/Tarea4/OOP.ipynb
-
-#Bloque 2 (Aprendizaje Profundo)
-MaterialClase
-
 # Tareas 
-B2_AprendizajeIA/TareaAP(I)
+
+# Bloque 2
+
+# Imágenes perros y gatos
+B2_DL/DL2/2_ConvolucionalesPytorch/CATS_DOGS
+B2_DL/DL2/2_ConvolucionalesPytorch/TigerHyenaCheetah

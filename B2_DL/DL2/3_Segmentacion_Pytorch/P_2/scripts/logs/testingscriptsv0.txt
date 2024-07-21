@@ -1,0 +1,48 @@
+# Antonio Martínez González
+
+LOGS_DIR="logs" # Directory where training logs will be saved. In this setting, the directory will contain models and log files.
+
+# This if-else block creates the logs directory if it does not exist
+if [ ! -d "$LOGS_DIR" ]; then
+    echo "Directory $LOGS_DIR does not exist. Creating directory"
+    mkdir -p "$LOGS_DIR"
+    echo "Directory created"
+fi
+
+# Train model
+python3 train.py --image_train_directory "../dataset/train/images" \
+                 --mask_train_directory "../dataset/train/masks" \
+                 --image_test_directory "../dataset/val/images" \
+                 --mask_test_directory "../dataset/val/masks" \
+                 --mixed_precision_training True \
+                 --in_channels 3 \
+                 --out_channels 1 \
+                 --batch_norm True \
+                 --n_epochs 10 \
+                 --learning_rate "0.0001" \
+                 --batch_size 16 \
+                 --n_workers 1 \
+                 --shuffle True \
+                 --crop True \
+                 --image_height 160 \
+                 --image_width 240 \
+                 --load_pretrained "" \
+                 --model_path "models/testingscriptsv0.pth" \
+                 --early_stopping True \
+                 --patience 3 \
+                 --min_delta 0.0 \
+                 --mode "max" \
+                 --predictions_dir "predictions/testingscriptsv0";
+
+# The two following lines show how this sh file is intended to be used
+# cat train.sh > path-to-log-file.txt # write the contents of the sh file on a txt log file 'path-to-log-file.txt'
+# . train.sh >> path-to-log-file.txt 2>&1 # appends stdout+errors resulting from the execution of the sh file to the txt log file 'path-to-log-file.txt'Train loss : 0.1406 || Test loss : 0.1385 || Train Acc : 0.9888 || Test Acc : 0.9907 || Train DICE : 0.9738 || Test DICE : 0.9780 || Epoch time : 127.55 s
+Train loss : 0.0903 || Test loss : 0.0884 || Train Acc : 0.9908 || Test Acc : 0.9923 || Train DICE : 0.9782 || Test DICE : 0.9814 || Epoch time : 127.70 s
+Train loss : 0.0595 || Test loss : 0.0569 || Train Acc : 0.9924 || Test Acc : 0.9940 || Train DICE : 0.9819 || Test DICE : 0.9856 || Epoch time : 128.74 s
+Train loss : 0.0436 || Test loss : 0.0411 || Train Acc : 0.9931 || Test Acc : 0.9946 || Train DICE : 0.9838 || Test DICE : 0.9870 || Epoch time : 128.18 s
+Train loss : 0.0348 || Test loss : 0.0323 || Train Acc : 0.9935 || Test Acc : 0.9947 || Train DICE : 0.9847 || Test DICE : 0.9873 || Epoch time : 126.35 s
+Train loss : 0.0290 || Test loss : 0.0263 || Train Acc : 0.9938 || Test Acc : 0.9951 || Train DICE : 0.9853 || Test DICE : 0.9882 || Epoch time : 129.93 s
+Train loss : 0.0256 || Test loss : 0.0220 || Train Acc : 0.9936 || Test Acc : 0.9954 || Train DICE : 0.9850 || Test DICE : 0.9890 || Epoch time : 127.01 s
+Train loss : 0.0213 || Test loss : 0.0187 || Train Acc : 0.9944 || Test Acc : 0.9956 || Train DICE : 0.9867 || Test DICE : 0.9894 || Epoch time : 126.99 s
+Train loss : 0.0188 || Test loss : 0.0162 || Train Acc : 0.9945 || Test Acc : 0.9957 || Train DICE : 0.9870 || Test DICE : 0.9898 || Epoch time : 126.74 s
+Train loss : 0.0181 || Test loss : 0.0154 || Train Acc : 0.9945 || Test Acc : 0.9957 || Train DICE : 0.9870 || Test DICE : 0.9898 || Epoch time : 115.06 s

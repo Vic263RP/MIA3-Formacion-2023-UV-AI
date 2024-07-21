@@ -10,6 +10,14 @@ B2_DL/DL2/2_ConvolucionalesPytorch/CATS_DOGS
 B2_DL/DL2/2_ConvolucionalesPytorch/TigerHyenaCheetah
 B2_DL/DL2/Data
 
+# Imágenes coches
+B2_DL/DL2/3_Segmentacion_Pytorch/P_2/CarvanaDataset
+B2_DL/DL2/3_Segmentacion_Pytorch/P_2/models
+B2_DL/DL2/3_Segmentacion_Pytorch/P_2/scripts/models
+
+#Imagenes B2.2 Autoencoders.3
+B2_DL/DL2/3_Segmentacion_Pytorch/Practica 3/dataset
+
 # Tarea RL que no quiero
 B3_RL/6_tarea/prut.ipynb
 B3_RL/6_tarea.zip

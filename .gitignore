@@ -21,6 +21,11 @@ B2_DL/DL2/3_Segmentacion_Pytorch/Practica 3/dataset
 #Imagenes B2.4 LSTM
 B2_DL/DL2/4_LSTM/2P/PASTIS_DL4ES
 
+#Imagenes GAN
+B2_DL/DL2/6_GAN/Celeba_LT
+B2_DL/DL2/6_GAN/Notebooks alumnos/MNIST
+B2_DL/DL2/6_GAN/models
+
 # Tarea RL que no quiero
 B3_RL/6_tarea/prut.ipynb
 B3_RL/6_tarea.zip
